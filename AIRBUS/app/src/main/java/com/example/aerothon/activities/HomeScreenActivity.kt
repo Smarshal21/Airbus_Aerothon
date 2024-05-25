@@ -47,7 +47,7 @@ class HomeScreenActivity : AppCompatActivity() {
         }
 
         binding.srit.setOnClickListener {
-            startActivity(Intent(this, PersonalityAssessmentActivity::class.java))
+            startActivity(Intent(this, FlightAssessmentActivity::class.java))
         }
 
 

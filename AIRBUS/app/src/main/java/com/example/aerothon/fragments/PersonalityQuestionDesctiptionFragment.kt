@@ -9,7 +9,7 @@ import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.aerothon.R
-import com.example.aerothon.activities.PersonalityAssessmentActivity
+import com.example.aerothon.activities.FlightAssessmentActivity
 
 class PersonalityQuestionDesctiptionFragment : Fragment() {
 
@@ -40,7 +40,7 @@ class PersonalityQuestionDesctiptionFragment : Fragment() {
         val qnumber = data!!.toInt()-1
 
         //-----------------------------------------------------------------------
-        val activity = activity as? PersonalityAssessmentActivity
+        val activity = activity as? FlightAssessmentActivity
 
         //-----------------------------------------------------------------------
         questionNoFromBundle.text = data.toString()

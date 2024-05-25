@@ -25,7 +25,7 @@ class SpareActivity : AppCompatActivity() {
         }
         else if(receivedData=="0"){
             if(score=="") {
-                startActivity(Intent(applicationContext, PersonalityAssessmentActivity::class.java))
+                startActivity(Intent(applicationContext, FlightAssessmentActivity::class.java))
                 finish()
             }
             else{

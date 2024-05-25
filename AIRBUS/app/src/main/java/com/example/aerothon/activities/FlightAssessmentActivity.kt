@@ -9,112 +9,112 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.aerothon.adapters.PersonalityAssessmentAdapter
+import com.example.aerothon.adapters.FLightAssessmentAdapter
 import com.example.aerothon.models.PersonalityAssessmentQuestionModel
 import com.example.aerothon.databinding.ActivityPersonalityAssessmentBinding
 import com.example.aerothon.fragments.AssessmentDefaultFragment
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
 
-class PersonalityAssessmentActivity : AppCompatActivity() {
+class FlightAssessmentActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPersonalityAssessmentBinding
     private lateinit var recyclerView: RecyclerView
     private lateinit var questionsList: ArrayList<PersonalityAssessmentQuestionModel>
-    private lateinit var questionsAdapter: PersonalityAssessmentAdapter
+    private lateinit var questionsAdapter: FLightAssessmentAdapter
     lateinit var score:String
 
-    val questions = arrayOf(
+    val flightConditionsQuestions = arrayOf(
         arrayOf(
-            "What is your employment history?",
-            "Stable employment history with no layoffs or firings",
-            "Some employment history with some layoffs or firings:",
-            "Short employment history or multiple Flight changes",
-            "No employment history",
+            "What is the current weather at the departure airport?",
+            "Clear skies",
+            "Partly cloudy",
+            "Overcast",
+            "Stormy",
             "null"
         ),
         arrayOf(
-            "What is your employment history?",
-            "Stable employment history with no layoffs or firings",
-            "Some employment history with some layoffs or firings:",
-            "Short employment history or multiple Flight changes",
-            "No employment history",
+            "What is the current weather at the arrival airport?",
+            "Clear skies",
+            "Partly cloudy",
+            "Overcast",
+            "Stormy",
             "null"
         ),
         arrayOf(
-            "What is your employment history?",
-            "Stable employment history with no layoffs or firings",
-            "Some employment history with some layoffs or firings:",
-            "Short employment history or multiple Flight changes",
-            "No employment history",
+            "What is the current wind speed at the departure airport?",
+            "Calm (0-5 mph)",
+            "Moderate (6-15 mph)",
+            "Strong (16-30 mph)",
+            "Severe (>30 mph)",
             "null"
         ),
         arrayOf(
-            "What is your employment history?",
-            "Stable employment history with no layoffs or firings",
-            "Some employment history with some layoffs or firings:",
-            "Short employment history or multiple Flight changes",
-            "No employment history",
+            "What is the current wind speed at the arrival airport?",
+            "Calm (0-5 mph)",
+            "Moderate (6-15 mph)",
+            "Strong (16-30 mph)",
+            "Severe (>30 mph)",
             "null"
         ),
         arrayOf(
-            "What is your employment history?",
-            "Stable employment history with no layoffs or firings",
-            "Some employment history with some layoffs or firings:",
-            "Short employment history or multiple Flight changes",
-            "No employment history",
+            "Are there any weather advisories or warnings for the flight path?",
+            "No advisories or warnings",
+            "Minor advisories",
+            "Moderate warnings",
+            "Severe warnings",
             "null"
         ),
         arrayOf(
-            "What is your employment history?",
-            "Stable employment history with no layoffs or firings",
-            "Some employment history with some layoffs or firings:",
-            "Short employment history or multiple Flight changes",
-            "No employment history",
+            "Is the aircraft fully fueled and ready for departure?",
+            "Yes, fully fueled",
+            "Partially fueled",
+            "Not fueled",
+            "Unknown",
             "null"
         ),
         arrayOf(
-            "What is your employment history?",
-            "Stable employment history with no layoffs or firings",
-            "Some employment history with some layoffs or firings:",
-            "Short employment history or multiple Flight changes",
-            "No employment history",
+            "Is the flight crew fully staffed and ready for the flight?",
+            "Yes, fully staffed",
+            "Partially staffed",
+            "Crew missing",
+            "Unknown",
             "null"
         ),
         arrayOf(
-            "What is your employment history?",
-            "Stable employment history with no layoffs or firings",
-            "Some employment history with some layoffs or firings:",
-            "Short employment history or multiple Flight changes",
-            "No employment history",
+            "Are all necessary pre-flight checks completed?",
+            "Yes, all checks completed",
+            "Some checks completed",
+            "No checks completed",
+            "Unknown",
             "null"
         ),
         arrayOf(
-            "What is your educational background?",
-            "College degree or higher",
-            "High school diploma or equivalent",
-            "Some college",
-            "No high school diploma",
+            "Are there any mechanical issues with the aircraft?",
+            "No issues",
+            "Minor issues",
+            "Major issues",
+            "Unknown",
             "null"
         ),
         arrayOf(
-            "What is your employment history?",
-            "Stable employment history with no layoffs or firings",
-            "Some employment history with some layoffs or firings:",
-            "Short employment history or multiple Flight changes",
-            "No employment history",
+            "Are all passengers accounted for and seated?",
+            "Yes, all accounted for",
+            "Some missing",
+            "Many missing",
+            "Unknown",
             "null"
         ),
         arrayOf(
-            "What is your income?",
-            "Over \$50,000",
-            "\$30,000-\$50,000",
-            "Less than \$30,000",
-            "I don't know",
+            "Are all passenger luggage loaded and secured?",
+            "Yes, all luggage loaded",
+            "Some luggage missing",
+            "Many luggage missing",
+            "Unknown",
             "null"
-        ),
-
+        )
     )
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -143,7 +143,7 @@ class PersonalityAssessmentActivity : AppCompatActivity() {
         questionsList.add(PersonalityAssessmentQuestionModel("11"))
 
 
-        questionsAdapter = PersonalityAssessmentAdapter(questionsList,this)
+        questionsAdapter = FLightAssessmentAdapter(questionsList,this)
         recyclerView.adapter = questionsAdapter
 
     }

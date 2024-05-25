@@ -11,11 +11,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.aerothon.R
-import com.example.aerothon.activities.PersonalityAssessmentActivity
+import com.example.aerothon.activities.FlightAssessmentActivity
 import com.example.aerothon.models.PersonalityAssessmentQuestionModel
 import com.example.aerothon.fragments.PersonalityQuestionDesctiptionFragment
 
-class PersonalityAssessmentAdapter(private val questionsList:ArrayList<PersonalityAssessmentQuestionModel>, private val activity: PersonalityAssessmentActivity):RecyclerView.Adapter<PersonalityAssessmentAdapter.QuestionsViewHolder>(){
+class FLightAssessmentAdapter(private val questionsList:ArrayList<PersonalityAssessmentQuestionModel>, private val activity: FlightAssessmentActivity):RecyclerView.Adapter<FLightAssessmentAdapter.QuestionsViewHolder>(){
     class QuestionsViewHolder(itemView:View) : RecyclerView.ViewHolder(itemView){
         val qNo:TextView = itemView.findViewById(R.id.qNo)
         val layout: RelativeLayout = itemView.findViewById(R.id.layout)
@@ -72,7 +72,7 @@ class PersonalityAssessmentAdapter(private val questionsList:ArrayList<Personali
             holder.qNo.setTextColor(Color.parseColor("#FFC6C7C9"))
         }
 
-        val activity = activity as? PersonalityAssessmentActivity
+        val activity = activity as? FlightAssessmentActivity
         if(activity!!.questions[position][5]=="null"){
             holder.layout.setBackgroundColor(Color.parseColor("#FF233238"))
             if(index == position){

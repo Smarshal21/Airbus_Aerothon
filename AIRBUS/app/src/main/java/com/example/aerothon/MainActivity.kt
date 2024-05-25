@@ -6,7 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.aerothon.activities.HomeScreenActivity
 import com.example.aerothon.activities.LoginActivity
-import com.example.aerothon.activities.PersonalityAssessmentActivity
+import com.example.aerothon.activities.FlightAssessmentActivity
 import com.example.aerothon.activities.SpareActivity
 import com.example.aerothon.databinding.ActivityMainBinding
 import com.example.aerothon.models.UserModel
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
 //        }
 
         binding.btnAssessmentActivity.setOnClickListener {
-            startActivity(Intent(applicationContext, PersonalityAssessmentActivity::class.java))
+            startActivity(Intent(applicationContext, FlightAssessmentActivity::class.java))
         }
 
         binding.btnHomeActivity.setOnClickListener {

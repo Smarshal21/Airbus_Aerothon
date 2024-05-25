@@ -49,9 +49,6 @@ Can lead to improved model performance, especially when the individual models ha
 
 <img src="https://github.com/Smarshal21/GREYLIFE_CANARA/assets/99678760/186e90d2-8e2e-4885-b72d-76308e8cf12b" width="700" height="300" /> 
 
-### Sample Input and Output
-<img src="https://github.com/Smarshal21/GREYLIFE_CANARA/assets/99678760/04403898-f017-4204-a711-8576a999cd91" width="1000" height="500" /> 
-
 ## BlockChain
 ### Overview
 This project focuses on the deployment of a Polygon Edge Chain on Amazon Web Services (AWS) using the Kaleido platform. The Polygon Edge Chain provides high-performance, low-latency infrastructure for blockchain applications. By successfully running a Polygon Edge Chain, this project aims to facilitate the development of efficient and scalable decentralized applications

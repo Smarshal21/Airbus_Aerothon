@@ -1,0 +1,6 @@
+sklearn
+streamlit
+networkx
+nltk
+pandas
+numpy
